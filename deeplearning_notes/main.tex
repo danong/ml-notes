@@ -1,0 +1,76 @@
+\documentclass[11pt]{report}
+
+% --- Packages ---
+\usepackage[usenames, dvipsnames]{color} % Cool colors
+\usepackage{enumerate, amsmath, amsthm, amssymb, algorithm, algpseudocode, pifont, subfig, fullpage, csquotes, dashrule, tikz, bbm, booktabs, bm, verbatim, url}
+\usepackage[framemethod=TikZ]{mdframed}
+\usepackage[numbers]{natbib}
+\usepackage{hyperref}
+
+% --- Misc. ---
+\hbadness=10000 % No "underfull hbox" messages.
+\setlength{\parindent}{0pt} % Removes all indentation.
+
+% --- Commands ---
+\input{commands}
+
+% --- Meta Info ---
+\title{deeplearning.ai Coursera Notes \thanks{\url{https://www.coursera.org/specializations/deep-learning}}}
+\author{Daniel Ong\\ danielong1@gmail.com}
+\date{March 2018}
+
+% --- Begin Document ---
+\begin{document}
+\maketitle
+
+\tableofcontents
+
+\chapter*{About} 
+\addcontentsline{toc}{chapter}{About}
+This is my personal notes from all 5 courses of the Deep Learning specialization on Coursera by deeplearning.ai. The primary motivations for creating this document are to create a useful reference for myself and to solidify my understanding of concepts and algorithms. Chapters and sections generally correspond to courses and weeks in the Coursera sequence but I split weeks that contain multiple topics into separate sections.
+
+
+\chapter{Neural Networks and Deep Learning}
+\section*{Learning Objectives}
+\begin{itemize}
+  \item Understand fundamentals of neural networks
+  \item Build a deep neural network that recognizes cats
+\end{itemize}
+
+\section{Introduction to Deep Learning}
+Andrew Ng believes that the impact of artificial intelligence (AI) on society will be on the same magnitude as the impact of electricity on society a hundred years ago. Deep learning (DL) is the field of AI that has been improving rapidly and driving recent progress. DL is already a powerful and proven method for solving certain types of problems (e.g. advertising, image classification, etc). 
+
+
+\section{Neural Network Basics}
+Neural networks are very loosely based on neurons are connected in brains. In brains, special cells called neurons are connected to each other. 
+\ddef{Artificial Neuron}{blah}
+\ddef{Neural Network}{A neural network is a collection of nodes that apply an activation function onto input...}
+\section{Shallow Neural Network}
+\ddef{Shallow Neural Network}{A neural network is a collection of nodes that apply an activation function onto input...}
+\section{Deep Neural Network}
+\ddef{Deep Neural Network}{A neural network is a collection of nodes that apply an activation function onto input...}
+\ddef{Deep Learning}{Deep Learning refers to the training of large neural networks.}
+
+\chapter{Improving Deep Neural Networks}
+\section{Practical Aspects of Deep Learning}
+\section{Optimization Algorithms}
+\section{Hyperparameter Tuning}
+\section{Batch Normalization}
+\section{Programming Frameworks}
+
+
+\chapter{Structuring Machine Learning Projects}
+
+
+\chapter{Convolutional Neural Networks}
+
+
+\chapter{Sequence Models}
+
+
+
+% --- Bibliography ---
+\bibliographystyle{plainnat}
+\bibliography{research}
+
+\end{document}
