@@ -1,22 +1,25 @@
 \chapter{Neural Networks and Deep Learning}
 \section*{Learning Objectives}
 \begin{itemize}
-  \item Understand fundamentals of neural networks
-  \item Build a deep neural network that recognizes cats
+  \item Understand the major technology trends driving Deep Learning
+  \item Be able to build, train, and apply fully connected deep neural networks
+  \item Know how to implement efficient (vectorized) neural networks
+  \item Understand the key parameters in a neural network's architecture
 \end{itemize}
 
 \section{Introduction to Deep Learning}
-Andrew Ng believes that the impact of artificial intelligence (AI) on society will be on the same magnitude as the impact of electricity on society a hundred years ago. Deep learning (DL) is the field of AI that has been improving rapidly and driving recent progress. DL is already a powerful and proven method for solving certain types of problems (e.g. advertising, image classification, etc). 
+Andrew Ng believes that the impact of artificial intelligence (AI) on society will be on the same magnitude as the impact of electricity on society a hundred years ago. Deep learning (DL) is the field of AI that has been improving rapidly and driving recent progress in AI research. DL is already a powerful and proven method for solving certain types of problems (e.g. advertising, image classification, etc). 
 
 
 \section{Neural Network Basics}
-Artificial neural networks are loosely based on biological neural networks. In brains, neurons are connected to each other to form a neural network. Each neuron has several dendrites (input connections), a soma (sums input signals), and axon terminals (output connections). If the sum of the input signals surpasses a threshold, the neuron outputs an electrical signal down its axon to other neuron's dendrites. 
+\img{neuron.png}{A biological neuron}
+Artificial neural networks are loosely based on biological neural networks. In brains, neurons are connected to each other to form a neural network. Each neuron has several dendrites (input connections), a soma (sums input signals), and axon terminals (output connections). If the sum of the input signals surpasses a threshold, the neuron outputs an electrical signal down its axon to other neuron's dendrites.\footnote{This is an extremely simplified model.} This is the only time biological neurons will be discussed. All future references to neurons and neural networks refer to artificial neurons and artificial neural networks.
 
-
-Similarly, artificial neurons receive inputs, sum them, and passes an output to other neurons.  
+Similarly, artificial neurons receive inputs, applies a weight to the inputs, calculates the sum of their inputs, and passes an output to other neurons.
 \ddef{Artificial Neuron}{An artificial neuron receives one or more inputs, x. Applies a weight to the input, W. }
 
-\ddef{Neural Network}{A neural network is a collection of nodes that apply an activation function onto input...}
+An artificial neural network is a collection of artificial neurons that are linked together. Neural networks widely used in the 80s and early 90s but their popularity diminished in the late 90s. However, recent improvements in hardware and software have made neural networks state of the art again.
+\ddef{Neural Network}{A neural network is a collection of artificial neurons that are linked together.}
 \section{Shallow Neural Network}
 \ddef{Shallow Neural Network}{A neural network is a collection of nodes that apply an activation function onto input...}
 \section{Deep Neural Network}

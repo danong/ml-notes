@@ -57,9 +57,11 @@
 
 % Basic Image
 \newcommand{\img}[2]{
-\begin{center}
-\includegraphics[scale=#2]{#1}
-\end{center}}
+\begin{figure}[h!]
+\includegraphics[width=0.5\columnwidth]{#1}
+\centering
+\caption{#2}
+\end{figure}}
 
 % Put a fancy box around things.
 \newcommand{\dbox}[1]{
