@@ -1,2 +1,4 @@
 # ml-notes
-My machine learning notes and algorithm implementations
+This is my personal notes from all 5 courses of the Deep Learning specialization on Coursera by deeplearning.ai. The primary motivations for creating this document are to create a useful reference for myself and to solidify my understanding of concepts and algorithms. Chapters and sections generally correspond to courses and weeks in the Coursera sequence. 
+
+My notes are in Latex. [main.pdf](main.pdf) is the latest rendered pdf.
