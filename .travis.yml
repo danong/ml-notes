@@ -8,7 +8,7 @@ script:
   - docker pull rekka/tectonic
   # interactively:
   # docker run -it --mount src=`pwd`,target=/usr/src/tex,type=bind rekka/tectonic
-  - docker run --mount src=$TRAVIS_BUILD_DIR/src,target=/usr/src/tex,type=bind rekka/tectonic tectonic main.tex
+  - docker run --mount src=$TRAVIS_BUILD_DIR/deeplearning_notes,target=/usr/src/tex,type=bind rekka/tectonic tectonic main.tex
 deploy:
   provider: releases
   api_key:
