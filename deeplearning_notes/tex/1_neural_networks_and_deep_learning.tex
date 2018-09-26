@@ -18,10 +18,32 @@ Artificial neural networks are loosely based on biological neural networks. In b
 Similarly, artificial neurons receive inputs, applies a weight to the inputs, calculates the sum of their inputs, and passes an output to other neurons.
 \ddef{Artificial Neuron}{An artificial neuron receives one or more inputs, x. Applies a weight to the input, W. }
 
-An artificial neural network is a collection of artificial neurons that are linked together. Neural networks widely used in the 80s and early 90s but their popularity diminished in the late 90s. However, recent improvements in hardware and software have made neural networks state of the art again.
-\ddef{Neural Network}{A neural network is a collection of artificial neurons that are linked together.}
+
+\subsection{Logistic regression}
+A single neuron can implement linear regression. Let's take a look at linear regression from a machine learning point of view.
+\ddef{Logistic regression}{An algorithm used when you want to predict a single output value from a single input value. Also known as linear regression with one variable. The geometric interpretation of this is finding the line of best fit.}
+Our implementation of linear regression will have 3 components. The linear hypothesis function outputs our line of best fit. The cost function measures how accurate our hypothesis is. We use the gradient descent algorithm to minimize the cost function. 
+
+\dbox{
+Hypothesis function: A function of x for fixed parameters. Given parameters $\theta$, function $h$ outputs a $y$ (output) value for any given $x$ (input) value.
+$$h_{\theta}(x)=\theta_{0}+\theta_{1}x$$
+}
+
+
+\dbox{
+Cost function or Squared error function: a way to measure the accuracy of our hypothesis function. A function of the parameters. It is the sum of the squares of the differences between our predicted output values and the given target variables. We want to choose parameters such that our hypothesis makes reasonably accurate predictions for our training examples. The cost function is a function of the parameters.
+
+$$J(\theta_{0},\theta_{1}) = \frac{1}{2m}\sum_{i = 1}^{m}(h_\theta (y^{(i)}) - (x^{(i)}))^2$$
+}
+
+\begin{python}
+def f(x):
+    return x
+\end{python}
 \section{Shallow Neural Network}
-\ddef{Shallow Neural Network}{A neural network is a collection of nodes that apply an activation function onto input...}
+To implement more complicated nonlinear functions with many input variables, multiple neurons are needed.\footnote{You can also create binomial combinations of variables to generate nonlinear functions but this does not scale well.} An artificial neural network is a collection of artificial neurons that are linked together. Neural networks widely used in the 80s and early 90s but their popularity diminished in the late 90s. However, recent improvements in hardware and software have made neural networks state of the art again.
+\ddef{Neural Network}{A neural network is a collection of artificial neurons that are linked together.}
+\ddef{Shallow Neural Network}{A neural network with one hidden layer is a shallow neural network.}
 \section{Deep Neural Network}
-\ddef{Deep Neural Network}{A neural network is a collection of nodes that apply an activation function onto input...}
+\ddef{Deep Neural Network}{A neural network with multiple hidden layers is a deep neural network.}
 \ddef{Deep Learning}{Deep Learning refers to the training of large neural networks.}
