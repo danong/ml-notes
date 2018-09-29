@@ -9,4 +9,11 @@ This is my personal notes from all 5 courses of the [Deep Learning specializatio
 The latest rendered PDF can be found in the [latest release](https://github.com/danong/ml-notes/releases/latest). I've configured Travis to only release the rendered PDF on tagged commits so the latest release may be out of date. If you want the absolute latest version, you can pull this repo and render the notes yourself.
 
 ## Credits
-These notes are written in Latex and automatically rendered by [Travis CI](https://travis-ci.org/) using [rekka's docker image for tectonic](https://github.com/rekka/tectonic-docker). The latex template and commands are modified versions of [David Abel's notes template](https://github.com/david-abel/latex_docs).
+These notes are written in Latex and automatically rendered by [Travis CI](https://travis-ci.org/) using [rekka's docker image for tectonic](https://github.com/rekka/tectonic-docker). The latex template and commands are modified versions of [David Abel's notes template](https://github.com/david-abel/latex_docs). Python highlighting by [Olivier Verdier](https://github.com/olivierverdier/python-latex-highlighting).
+
+## Other People's Notes
+
+* https://github.com/mbadry1/DeepLearning.ai-Summary
+* https://github.com/ppant/deeplearning.ai-notes
+* https://www.slideshare.net/TessFerrandez/notes-from-coursera-deep-learning-courses-by-andrew-ng
+* https://www.kdnuggets.com/2018/07/fast-ai-deep-learning-part-1-notes.html
