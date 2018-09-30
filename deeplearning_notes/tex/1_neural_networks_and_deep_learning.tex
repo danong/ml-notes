@@ -16,6 +16,8 @@ Artificial neural networks are loosely based on biological neural networks. In b
 Similarly, artificial neurons receive inputs, applies a weight to the inputs, calculates the sum of their inputs, and passes an output to other neurons.
 \ddef{Artificial Neuron}{An artificial neuron receives one or more inputs, x. Applies a weight to the input, W. }
 
+\todo{Insert artificla neuron diagram}
+
 To implement more complicated nonlinear functions with many input variables, multiple neurons are needed.\footnote{You can also create binomial combinations of variables to generate nonlinear functions but this does not scale well.} An artificial neural network is a collection of artificial neurons that are linked together. 
 
 \ddef{Neural Network}{A neural network is a collection of artificial neurons that are linked together.}
@@ -71,24 +73,34 @@ Neural networks were widely used in the 80s and early 90s but their popularity d
 \end{itemize}
 \section{Neural Network Basics}
 
-\todo{Use proper formatting for superscripts/subscripts}
+
+\subsection{Logistic regression}
+A single neuron can implement logistic regression. Let's take a look at logistic regression from a machine learning point of view by working through an example. 
+\ddef{Logistic regression}{Regression model where the dependent variable (DV) is categorical. Examples: classify a tumor as either benign or malignant based on features, classify an image as either containing a hotdog or not containing a hotdog.}
+Imagine we want to build a model that can determine if an image contains a cat. We have a training set of images that are labeled (i.e. we know if there is or isn't a cat in each image). If we have a 64 x 64 pixel, 3 channel image, we can turn this into a feature vector by unrolling all pixel intensity values into a long feature vector with dimensions $n_{x} = 64 \times 64 \times 3 = 12,288$.
 \dbox{
-NOTATION
+IMPORTANT NOTATION
 
 \begin{itemize}
-	\item M is the number of training vectors
-	\item Nx is the size of the input vector
-	\item Ny is the size of the output vector
-	\item X(1) is the first input vector
-	\item Y(1) is the first output vector
-	\item X = [x(1) x(2).. x(M)]
-	\item Y = (y(1) y(2).. y(M))
+	\item $(x, y)$ is a single training example. $x$ is a input vector and $y$ is the output variable where $x\in \mathbb{R}^{n_x}, y\in\{0, 1\}$ for binary classification.
+	\item $m$ or $m_{train}$  is the number of training vectors
+	\item $n_x$ or $n$ is the size of a input vector
+	\item $n_y$ is the size of the output vector
+	\item $(x^{(1)}, y^{(1)}, (x^{(2)}, y^{(2)}), ..., (x^{(m)}, y^{(m)})$ is the entire training set
+	\item $X$ is a $(n_x \times m)$ matrix where each column is an individual training vector:
+\[ X =
+\begin{bmatrix}
+ \vert & \vert && \vert\\
+ v_1 & v_2 & \dots&  x^{(m)}\\
+ \vert & \vert&& \vert
+\end{bmatrix}
+\]
+	\item We can also stack $y$ into a $(1, m)$ matrix: $Y = \left[ \begin{matrix} y^{(1)} & Y^{(2)} & \dots & y^{(m)} \end{matrix} \right] $
+
 \end{itemize}
 }
 
-\subsection{Logistic regression}
-A single neuron can implement logistic regression. Let's take a look at linear regression from a machine learning point of view.
-\ddef{Logistic regression}{Regression model where the dependent variable (DV) is categorical. Examples: classify a tumor as either benign or malignant based on features, classify an image as either containing a hotdog or not containing a hotdog.}
+
 Our implementation of linear regression will have 3 components. The linear hypothesis function outputs our line of best fit. The cost function measures how accurate our hypothesis is. We use the gradient descent algorithm to minimize the cost function. 
 
 \todo{Replace with proper notation from new course}
