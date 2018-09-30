@@ -101,14 +101,24 @@ IMPORTANT NOTATION
 }
 
 
-Our implementation of linear regression will have 3 components. The linear hypothesis function outputs our line of best fit. The cost function measures how accurate our hypothesis is. We use the gradient descent algorithm to minimize the cost function. 
+Our implementation of logistic regression will have 3 components. The hypothesis function. The cost function measures how accurate our hypothesis is. We use the gradient descent algorithm to minimize the cost function. 
 
 \todo{Replace with proper notation from new course}
 
 \dbox{
-Hypothesis function: A function of x for fixed parameters. Given parameters $\theta$, function $h$ outputs a $y$ (output) value for any given $x$ (input) value.
-$$h_{\theta}(x)=\theta_{0}+\theta_{1}x$$
+Hypothesis function: A function of x for fixed parameters. Given parameters $w$, function $h$ outputs a $y$ (output) value for any given $x$ (input) value.
+
+For binary logistic regression:
+Given $x$, want $\hat{y} = P(y = 1 | x)$, where $x\in \mathbb{R}^{n_x}$
+
+Parameters: $w\in \mathbb{R}^{n_x}, b \in \mathbb{R}$
+
+Output $\hat{y} = \sigma(w^Tx + b)$, where $\sigma(z) = \frac{1}{1 + e^{-z}}$
 }
+
+We use the sigmoid function to ensure $ 0 <= \hat{y} <= 1$.
+
+The goal is to get $\hat{y}^{(i)} \approx y^{(i)}$
 
 
 \dbox{
