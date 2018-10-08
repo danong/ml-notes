@@ -103,8 +103,6 @@ IMPORTANT NOTATION
 
 Our implementation of logistic regression will have 3 components. The hypothesis function. The cost function measures how accurate our hypothesis is. We use the gradient descent algorithm to minimize the cost function. 
 
-\todo{Replace with proper notation from new course}
-
 \dbox{
 Hypothesis function: A function of x for fixed parameters. Given parameters $w$, function $h$ outputs a $y$ (output) value for any given $x$ (input) value.
 
@@ -120,12 +118,31 @@ We use the sigmoid function to ensure $ 0 <= \hat{y} <= 1$.
 
 The goal is to get $\hat{y}^{(i)} \approx y^{(i)}$
 
+\ddef{Deep Learning}{Deep Learning refers to the training of large neural networks.}
+
+We need a way to quantify the accuracy of our model. We need a function, $L$, that is small when $\hat{y}$ and $y$ are similar and large when $\hat{y}$ and $y$ are different. 
+
+\dbox{Loss function: a way to measure the accuracy of a single example.
+
+$$L (\hat{y}, y) = (1 - y)(\log(1 - \hat{y})) - (y) (\log{\hat{y}}))$$
+}
+
+Let's consider the 2 possibles values of $y$ to see how this function behaves:
+
+When $y = 1 \implies  L (\hat{y}, 1) = (0) (\log(1 - \hat{y})) - (1) (\log{\hat{y}}) = -\log{\hat{y}}$. Then $\hat{y} = 1 \implies L(\hat{y}, 1) = 0$. The loss is 0 since $\hat{y}$ is accurate. On the other hand, $\hat{y} = 0 \implies L(\hat{y}, 1) \xrightarrow{y\to0} \infty$ so the loss is high when $\hat{y}$ is inaccurate.
+
+When $y = 0 \implies  L (\hat{y}, 1) = (1) (\log(1 - \hat{y})) - (0) (\log{\hat{y}})  = \log(1 - \hat{y})$. Then $\hat{y} = 0 \implies L(\hat{y}, 0) = 0$ and $\hat{y} = 1 \implies L(\hat{y}, 0) \xrightarrow{y\to1} \infty$. Likewise, the loss is low when $\hat{y}$ is accurate and high when $\hat{y}$ is inaccurate.
+
+
+We use the following loss function in logistic regression because it convex (smooth). Other loss functions like the square root error are non-convex in this case.
 
 \dbox{
-Cost function or Squared error function: a way to measure the accuracy of our hypothesis function. A function of the parameters. It is the sum of the squares of the differences between our predicted output values and the given target variables. We want to choose parameters such that our hypothesis makes reasonably accurate predictions for our training examples. The cost function is a function of the parameters.
+Cost function : a way to measure the accuracy of our hypothesis function. A function of the parameters. It is the sum of the squares of the differences between our predicted output values and the given target variables. We want to choose parameters such that our hypothesis makes reasonably accurate predictions for our training examples. The cost function is a function of the parameters $w, b$.
 
-$$J(\theta_{0},\theta_{1}) = \frac{1}{2m}\sum_{i = 1}^{m}(h_\theta (y^{(i)}) - (x^{(i)}))^2$$
+$$J(w, b) = \frac{1}{m}\sum_{i = 1}^{m}(L (\hat{y}, y))$$
 }
+
+The cost function is basically the average loss function over the entire training set for a given set of parameters.
 
 
 \section{Shallow Neural Network}
